@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+       <?php
+include('core/login.php'); // Includes Login Script
+
+if(isset($_SESSION['login_user'])){
+header("location: profile.php");
+}
+?>
+<html>
+    <head>
+        <title>The Homestead</title>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Custom Theme files -->
+        <!--theme-style-->
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+        <!--//theme-style-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Fruit Fresh Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+              Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    </head>
+    <body>
+        <!--header-->
+        <div class="container">
+            <div class="header">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo2.png" alt="" /></a>
+                    </div>
+
+
+                    <!--<div class="search">
+                            <form>
+                             <div class="col-md-4 header-top-right">
+                            
+                       </div>
+            
+                                    <input type="text" value=" Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" >
+                                    <input type="submit"  value="">
+                            </form>
+                    </div>-->
+
+                    <div class="clearfix"></div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" >HOME</a></li>
+                        <li><a href="about.html" >ABOUT US</a>
+                            <!-- First Drop Down -->
+                            <ul>
+                                <li><a href="about.html">ABOUT US</a></li>
+                                <li><a href="more info.html">MORE INFO</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="projects.html" >OUR PROJECTS</a></li>
+                        <li><a href="gallery.html" >GALLERY</a>
+                            <!-- Second Drop Down -->
+                            <ul>
+                                <li><a href="gallery.html">GALLERY</a></li>
+                                <li><a href="videos.html">VIDEOS</a></li>
+                            </ul>
+                        <li><a href="donate.html" >DONATE</a></li>
+                        <li><a href="volunteering.html" >VOLUNTEERING</a></li>
+                        <li><a href="contact.html" >CONTACT</a></li>
+                    </ul>
+
+                </nav>
+
+
+            </div>
+            <!--//header-->
+
+            <!--content-->
+            <br>
+            <div class="content">
+
+                <div class="jumbotron">
+
+                    <div class="about">
+                        <div class="about-top">
+                            <h1>Log-in</h1>
+
+
+                        </div>
+                        <div class='reg'>
+                            <div class="clear"></div>                 
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <form class="form-group" action="" method="post">
+                                        <label class="formLabel">UserName :</label><br/>
+                                        <input id="name" name="username" placeholder="username" type="text" class="form-control"><br/>
+                                        <label class="formLabel">Password :</label><br/>
+                                        <input id="password" name="password" placeholder="**********" type="password" class="form-control"><br/>
+                                        <input name="submit" type="submit" value=" Login "  class="btn btn-primary">
+                                        <span><?php echo $error; ?></span>
+                                    </form>
+                                    <p>not a member,please register! 
+                                        <a href="register.html">Register</a> </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+
+                <!--//content-->
+                <!--footer-->
+
+                <div class="footer">
+                    <!--newsletter-->
+                    <div class="newsletter">
+                    </div>
+                    <!--//newsletter-->
+                    <div class="footer-top-top">
+
+                        <div class="col-md-4 footer-top">
+                            <p class="footer-class"> © 2015 The Homestead All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">Thabang Tisane</a> </p>
+                        </div>
+
+                        <div class="col-md-4 footer-top">
+                            <p>The Homestead Projects For Street Children - NPO 003-218 - PBO 18/11/13/1038</p>
+                        </div>
+                        <div class="col-md-44">
+                            <ul class="social">
+                                <li><a href="#"><i> </i></a></li>						
+                                <li><a href="#"><i class="twitter"> </i></a></li>
+                                <li><a href="#"><i class="email"> </i></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <!--//footer-->
+            </div>
+    </body>
+</html>
